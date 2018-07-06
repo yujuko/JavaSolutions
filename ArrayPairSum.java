@@ -12,27 +12,18 @@
 
 package com.lucy;
 
-public class Solution {
+class Solution {
     public int arrayPairSum(int[] nums) {
-
-        int i, j;
-
-        for (i = 0; i < nums.length - 1; i++) {
-            for (j = 0; j < nums.length - 1; j++) {
-                if (nums[j + 1] < nums[j]) {
-                    int temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
-                }
-            }
-        }
+        Arrays.sort(nums);
         int sum = 0;
-        for ( j=0 ; j < nums.length-1 ; j++) {
-            if (j % 2 == 0) {
+        int  j;
+        
+        for ( j=0 ; j < nums.length-1 ; j++){
+            if ( j % 2 == 0 ){
                 sum += nums[j];
             }
-        }return sum;
+        }
+        return sum;
     }
 }
-
 
