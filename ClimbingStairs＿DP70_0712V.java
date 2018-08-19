@@ -23,7 +23,9 @@
 //
 
 
-//Solutions:
+// Solutions:
+// dp(n)= dp(n-1) + dp(n-2) , 少一階的解加上少兩階的解（最後只可能走一部或走兩步）
+
 class Solution {
     public int climbStairs(int n) {
 
@@ -47,7 +49,7 @@ class Solution {
 }
 
 //Fibonacci: 以1,2起始的Fibonacci數列（遞迴）
-// -->TINE LIMIT EXCEEDED.
+// -->TIＭE LIMIT EXCEEDED.
 
 class Solution {
     public int climbStairs(int n) {
