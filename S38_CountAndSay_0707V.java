@@ -29,23 +29,23 @@ class Solution {
         int count;
         char num;
 
-        for ( int i=1 ; i<n ; i++ ){
+        for ( int i=1 ; i<n ; i++ ){ //intput要run的輪數,從上一輪結果的第一位開始再run
             prev = curr;
             curr = new StringBuilder();
             count = 1;
-            num = prev.charAt(0);
-
-            for( int j=1, len = prev.length() ; j<len ; j++ ){
-                if ( prev.charAt(j) != num ){
-                    curr.append(count).append(num);
+            num = prev.charAt(0);// i=0 第一位開始和下面 J=1 第2位比較
+            
+            for( int j=1; j<len.length ; j++ ){ //每一run從第一位開始比對,不相同就接上,相同就+1
+                if ( prev.charAt(j) != num ){ //第二位！=第一位
+                    curr.append(count).append(num); // 接上第一位
                     count = 1;
-                    num = prev.charAt(j);
+                    num = prev.charAt(j); //第二位放入第一位下一輪比較
                 }
-                else{
+                else{ //第二位 =第一位
                     count ++;
                 }
             }
-            curr.append(count).append(num);
-        }return curr.toString();
+            curr.append(count).append(num); //最後接上最後跳出的一run
+        }return curr.toString(); //轉換成固定String
     }
 }
