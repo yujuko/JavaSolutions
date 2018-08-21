@@ -86,3 +86,8 @@ class Solution {
 
     }
 }
+
+NOTE:
+1. length() -> 字串length要加（）
+2. System.out.printLn -> S為大寫
+3.for ( int i = 0 ; i < s.length() ; i++ ) ->注意 < 或 <=
