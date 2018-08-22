@@ -36,16 +36,24 @@ import java.util.Stack;
 
 class Solution {
     public boolean isValid(String s) {
-        Stack<Character> st = new Stack<Character>();
+        Stack<Character> st = new Stack<Character>(); //建立新Stack
 
-        for( char a : s.toCharArray()){
+        for( char a : s.toCharArray()){ //把字串換成字元陣列,從最左邊開始
 
             if ( a == '(') st.push(')');
             else if ( a == '[') st.push(']');
             else if ( a == '{') st.push('}');
             else if ( st.isEmpty() || st.pop()!= a ) return false;
+            //若為左括弧則推進右括弧,若不是左括弧應該和最後推進的右括弧相等
         }
         return st.isEmpty() ;
     }
 }
+
+NOTE :
+1. Stack<Character> st = new Stack<Character>();
+   --> 'S'tack 要大寫
+   --> new Stack<Character>() 最後記得（）
+2. s.toCharArray() ,st.isEmpty(),st.pop()
+   --> 最後要()
         
