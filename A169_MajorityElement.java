@@ -14,8 +14,16 @@ package com.lucy;
 //        Output: 2
 //
 
+// Approach 1: Sorting
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
+        
+    }
+}
 
-// Approach 1: Brute Force
+// Approach 2: Brute Force
 class Solution {
     public int majorityElement(int[] nums) {
         int i, j ;
@@ -40,7 +48,7 @@ class Solution {
 }
 }
 
-//Approach 2: Boyer-Moore Voting Algorithm
+//Approach 3: Boyer-Moore Voting Algorithm
 class Solution {
     public int majorityElement(int[] nums) {
         int count = 0 ;
