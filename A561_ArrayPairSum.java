@@ -9,6 +9,7 @@
 //
 //Output: 4
 //Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).
+//
 //Note:
 //n is a positive integer, which is in the range of [1, 10000].
 //All the integers in the array will be in the range of [-10000, 10000].
@@ -28,3 +29,6 @@ class Solution {
     }
 }
 
+NOTE:
+1.Arrays.sort(nums) --> A大寫 ,Arrays要加s
+2.j+=2 -->不是j+2 
