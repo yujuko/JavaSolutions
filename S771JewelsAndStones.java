@@ -31,3 +31,8 @@ class Solution {
         return count;
     }
 }
+
+//discussion:
+public int numJewelsInStones(String J, String S) {
+   return S.replaceAll("[^" + J + "]", "").length();
+}
